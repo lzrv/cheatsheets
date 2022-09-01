@@ -1,4 +1,4 @@
 # set/change remote origin
 ```bash
-git remote set-url origin
+git remote set-url origin [link]
 ```
