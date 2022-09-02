@@ -9,3 +9,8 @@ python3 -m venv [dir]
 ```bash
 source myvenv/bin/activate
 ```
+
+# deactivate venv
+```bash
+deactivate
+```
