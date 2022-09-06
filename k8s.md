@@ -23,4 +23,9 @@ chmod u+x ~/bin/kind
 kind [create|delete] cluster
 ```
 
+## kubectl
 
+* Change namespace context
+```bash
+kubectl config set-context --current --namespace [ns]
+```
