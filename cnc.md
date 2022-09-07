@@ -14,6 +14,7 @@ kind create cluster
 * Customize certs
 
   1. create a new cert including the current hostname
+  NOTE: go cannot parse encrypted keys, so create an unecnrypted one(w/o pswd)
 
 ```bash
 GENERATE NEW CERT/KEY/CACERT
