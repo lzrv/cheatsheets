@@ -13,7 +13,7 @@ kind create cluster
 
 * Customize certs
 
-    1. create a new cert including the current hostname
+  1. create a new cert including the current hostname
 
 ```bash
 GENERATE NEW CERT/KEY/CACERT
@@ -45,7 +45,7 @@ Additional:
 openssl req  -nodes -new -x509  -keyout ssl.key -out ssl.cert
 ```
 
-    2. Move the custom key and cert to `cnc-umbrella-chart/local-dev/certs`
+  2. Move the custom key and cert to `cnc-umbrella-chart/local-dev/certs`
 
 * configure the helm chart to use your server host name instead of local.cim.com
 
