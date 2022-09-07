@@ -48,6 +48,12 @@ openssl req  -nodes -new -x509  -keyout ssl.key -out ssl.cert
   2. Move the custom key and cert to `cnc-umbrella-chart/local-dev/certs`
 
 * configure the helm chart to use your server host name instead of local.cim.com
+  - change the following lines to the actual machine hostname in the `local-dev/cnc/values.yaml`
+  ```bash
+  local-dev/cnc/values.yaml:      - local.cim.com
+  local-dev/cnc/values.yaml:          - local.cim.com
+  local-dev/cnc/values.yaml:      url: "https://local.cim.com"
+  ```
 
 * Run install script
 ```bash
