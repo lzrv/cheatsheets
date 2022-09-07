@@ -14,6 +14,7 @@ kind create cluster
 * Customize certs
 
     1. create a new cert including the current hostname
+
 ```bash
 GENERATE NEW CERT/KEY/CACERT
 
