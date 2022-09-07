@@ -60,3 +60,8 @@ openssl req  -nodes -new -x509  -keyout ssl.key -out ssl.cert
 cd local-dev
 ./deploy-cnc.sh
 ```
+
+* Uninstall / cleanup
+```bash
+kind delete cluster
+```
