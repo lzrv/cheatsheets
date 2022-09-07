@@ -32,7 +32,7 @@ nodes:
 
 * Create kind cluster
 ```bash
-kind create cluster
+kind create cluster --config=kind-config.yaml
 ```
 
 * Clone CNC repo
