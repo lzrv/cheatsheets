@@ -11,7 +11,9 @@ kind create cluster
 
 * Clone CNC repo
 
-* create a new cert including the current hostname
+* Customize certs
+
+1. create a new cert including the current hostname
 ```bash
 GENERATE NEW CERT/KEY/CACERT
 
@@ -41,6 +43,10 @@ Additional:
 6/ Create self-signed server certificate in one command:
 openssl req  -nodes -new -x509  -keyout ssl.key -out ssl.cert
 ```
+
+2. Move the custom key and cert to `cnc-umbrella-chart/local-dev/certs`
+
+* configure the helm chart to use your server host name instead of local.cim.com
 
 * Run install script
 ```bash
