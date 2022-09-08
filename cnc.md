@@ -5,20 +5,31 @@
 ### Local / dev (with Kind)
 
 * Pull images
-  - Install gcloud
-    ```bash
-    sudo dnf install google-cloud-cli
-    $ sudo tee -a /etc/yum.repos.d/google-cloud-sdk.repo << EOM
-    [google-cloud-cli]
-    name=Google Cloud CLI
-    baseurl=https://packages.cloud.google.com/yum/repos/cloud-sdk-el7-x86_64
-    enabled=1
-    gpgcheck=1
-    repo_gpgcheck=0
-    gpgkey=https://packages.cloud.google.com/yum/doc/yum-key.gpg
-        https://packages.cloud.google.com/yum/doc/rpm-package-key.gpg
-    EOM
-    ```
+```bash
+docker pull sig-repo.synopsys.com/synopsys/cim-web:2022.6.0
+docker pull sig-repo.synopsys.com/synopsys/cim-downloads:2022.6.0
+docker pull sig-repo.synopsys.com/synopsys/cim-tools:2022.6.0
+docker pull sig-repo.synopsys.com/synopsys/cim-database:2022.6.0
+docker pull sig-repo.synopsys.com/synopsys/cov-manage-im:2022.6.0
+```
+
+* Tag images
+```bash
+docker tag sig-repo.synopsys.com/synopsys/cim-web:2022.6.0 localhost:5000/cim-web:2022.6.0
+docker tag sig-repo.synopsys.com/synopsys/cim-downloads:2022.6.0 localhost:5000/cim-downloads:2022.6.0
+docker tag sig-repo.synopsys.com/synopsys/cim-tools:2022.6.0 localhost:5000/cim-tools:2022.6.0
+docker tag sig-repo.synopsys.com/synopsys/cim-database:2022.6.0 localhost:5000/cim-database:2022.6.0
+docker tag sig-repo.synopsys.com/synopsys/cov-manage-im:2022.6.0 localhost:5000/cov-manage-im:2022.6.0
+```
+
+* Push images to the local repo
+```bash
+docker push localhost:5000/cim-web:2022.6.0
+docker push localhost:5000/cim-downloads:2022.6.0
+docker push localhost:5000/cim-tools:2022.6.0
+docker push localhost:5000/cim-database:2022.6.0
+docker push localhost:5000/cov-manage-im:2022.6.0
+```
 
 * Create kind config `kind-config.yaml`
 ```yaml
