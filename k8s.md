@@ -23,6 +23,11 @@ chmod u+x ~/bin/kind
 kind [create|delete] cluster
 ```
 
+* list clusters
+```bash
+kind get clusters
+```
+
 ## kubectl
 
 * Change namespace context
