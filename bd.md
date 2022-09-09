@@ -5,6 +5,16 @@
 ### Helm
 
 * (Guide)[https://github.com/blackducksoftware/hub/tree/master/kubernetes/blackduck]
+* Modify values.yaml to use internal postgres(set to use external by default
+```
+postgres:
+  isExternal: true -> isExternal: false
+```
+
+* Install
+```bash
+  helm install ${BD_NAME} synopsys/blackduck -n ${BD_NAME} -f values.yaml -f ${BD_SIZE}.yaml
+```
 
 #### Issues:
 * Helm install fails with(Helm 3):
