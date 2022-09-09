@@ -1,4 +1,14 @@
-# Detect examples
+# BD cheatsheet
+
+## K8s install
+
+### Helm
+
+* (Guide)[https://github.com/blackducksoftware/hub/tree/master/kubernetes/blackduck]
+
+
+
+## Detect examples
 
 ### Rapid scan
 
