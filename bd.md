@@ -5,6 +5,13 @@
 ### Helm
 
 * (Guide)[https://github.com/blackducksoftware/hub/tree/master/kubernetes/blackduck]
+
+* Create BD namespace:
+```bash
+kubectl create ns ${BD_NAME}
+```
+
+*
 * Modify values.yaml to use internal postgres(set to use external by default
 ```
 postgres:
@@ -13,7 +20,7 @@ postgres:
 
 * Install
 ```bash
-  helm install ${BD_NAME} synopsys/blackduck -n ${BD_NAME} -f values.yaml -f ${BD_SIZE}.yaml
+  helm install ${BD_NAME} synopsys/blackduck -f values.yaml
 ```
 
 #### Issues:
@@ -22,6 +29,7 @@ postgres:
 $ helm install ${BD_NAME} synopsys/blackduck --namespace ${BD_NAME} -f ${BD_SIZE}.yaml --set tlsCertSecretName=${BD_NAME}-blackduck-webserver-certificate
 Error: INSTALLATION FAILED: failed pre-install: unable to build kubernetes object for pre-install hook blackduck/templates/postgres-config.yaml: error validating "": error validating data: unknown object type "nil" in ConfigMap.data.HUB_POSTGRES_HOST
 ```
+* Type LoadBalancer is not supported by Kind out of the box.
 
 ## Detect examples
 
