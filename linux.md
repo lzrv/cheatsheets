@@ -2,6 +2,16 @@
 
 ## Misc
 
+* run sudo w/o pswd
+  - add NOPASSWD to the user in the sudoers file
+```bash
+$ sudo visudo
+```
+  - edit config in the /etc/sudoers.d
+```bash
+sudo visudo -f /etc/sudoers.d/90-cloud-init-users
+```
+
 * Get number of CPU cores
 ```bash
 grep -c ^processor /proc/cpuinfo
