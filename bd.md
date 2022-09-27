@@ -43,3 +43,10 @@ bash <(curl -s -L https://detect.synopsys.com/detect7.sh) \
 --detect.blackduck.scan.mode=RAPID \
 --detect.bom.aggregate.name=aggregated.bdio \
 --detect.cleanup=false
+
+## Troubleshooting
+
+# check webserve access log
+```bash
+grep -Po '"GET /api/\w+' hub-webserver/access-log/2022-09-22.log | sort | uniq -c | sort -rn | head
+```
