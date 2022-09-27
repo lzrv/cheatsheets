@@ -4,7 +4,7 @@
 
 ### Helm
 
-* (Guide)[https://github.com/blackducksoftware/hub/tree/master/kubernetes/blackduck]
+* [Guide](https://github.com/blackducksoftware/hub/tree/master/kubernetes/blackduck)
 
 * Create BD namespace:
 ```bash
