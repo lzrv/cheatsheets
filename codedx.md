@@ -21,3 +21,9 @@ ports:
 depends_on:
     - codedx-db
 ```
+
+* Start the app
+
+```bash
+docker compose -f docker-compose.yml up
+```
