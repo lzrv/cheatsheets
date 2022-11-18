@@ -27,3 +27,29 @@ depends_on:
 ```bash
 docker compose -f docker-compose.yml up
 ```
+
+## Change log level
+
+* Check the current log level (default is INFO)
+```bash
+docker exec 955fe4713473 grep "root level" /opt/codedx/logback.xml
+```
+
+* Change the log level to TRACE
+```bash
+* edit logback.xml
+docker exec <Tomcat_container_id> sed -i 's/root level\=\"INFO\"/root level\=\"TRACE\"/g' /opt/codedx/logback.xml
+
+* restart the Tomcat container
+docker restart <Tomcat_container_id>
+```
+
+
+* Revert changes
+```bash
+* edit logback.xml
+docker exec <Tomcat_container_id> sed -i 's/root level\=\"TRACE\"/root level\=\"INFO\"/g' /opt/codedx/logback.xml
+
+* restart the Tomcat container
+docker restart <Tomcat_container_id>
+```
