@@ -31,7 +31,13 @@ Error: INSTALLATION FAILED: failed pre-install: unable to build kubernetes objec
 ```
 * Type LoadBalancer is not supported by Kind out of the box.
 
-## Detect examples
+## Detect
+
+### check Detect properties in command-line
+
+```bash
+bash <(curl -s -L https://detect.synopsys.com/detect8.sh) -hv 2>&1 | tr -s ' ' | less -inRF
+```
 
 ### Rapid scan
 
